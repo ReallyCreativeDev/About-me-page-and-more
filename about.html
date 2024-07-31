@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <title>About skittlesfy</title>
+    <link rel="stylesheet" href="aboutstyles.css">
+    <link rel="icon" type="image/x-icon" href="./images/pfp.jpg" />
+</head>
+
+<body>
+  <a href="index.html" id="back-button">Back to Profile</a>
+  <div class="stats-container scrollbar-custom"> 
+    <h1>About Skittlesfy</h1>
+
+    <img src="/images/st.png" alt="Photo of Skittles the cat" id="skittles-image">
+    
+    <h1>About Skittlesfy</h1>
+    <p>Missing skittles while you browse youtube? problem solved!</p>
+
+    <p>The Skittlesfy Chrome Extension lets you bring your adorable cat (named Skittles, duh!) to every youtube thumbnail. imagine:</p>
+
+    <ul>
+        <li>Epic movie trailers? Now featuring skittles as the main character.</li>
+        <li>Cute cat compilations? Skittles  blends right in!</li>
+        <li>Latest news updates? Skittles is on the case!</li>
+    </ul>
+    <a href="https://chromewebstore.google.com/detail/skittlesfy/cmoaaccflggimaldnipkfeffkheemchd" id="download-button">Download Skittlesfy</a>
+    <p>Copyright of ReallyCreative© <span id="getCurrentDate"></span></p>
+  </div> 
+</body>
+</html>
+<script>
+  var dt = new Date();
+  document.getElementById('getCurrentDate').innerHTML = dt.getFullYear();
+
+  var currentPage = window.location.pathname;
+  var navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach(function(link) {
+    if (link.href.includes(currentPage)) {
+      link.classList.add('active');
+    }
+  });
+</script>
